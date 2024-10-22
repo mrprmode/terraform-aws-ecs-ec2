@@ -32,7 +32,7 @@ or `terraform apply -var db_username="some_name" -var db_password="some_pwd" ...
 ```
 DB_USER
 DB_PWD
-DB_NAME
+DB_DATABASE
 DB_HOST
 ```
 #### Apply the Terraform configs

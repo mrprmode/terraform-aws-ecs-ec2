@@ -31,7 +31,7 @@ module "ecs_service" {
         { name = "DB_USER", value = "${module.multiple.db_username.secure_value}" },
         { name = "DB_PWD", value = "${module.multiple.db_password.secure_value}" },
         { name = "DB_HOST", value = "${aws_db_instance.mountains.address}" },
-        { name = "DB_NAME", value = "${module.multiple.db_database.secure_value}" }
+        { name = "DB_DATABASE", value = "${module.multiple.db_database.secure_value}" }
       ]
 
       readonly_root_filesystem = true
