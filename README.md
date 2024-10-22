@@ -16,7 +16,7 @@ export AWS_ACCESS_KEY_ID="AK................................KMZ" && \
 #### Build docker image & push to your ECR
 ```
 git clone git@github.com:mrprmode/mountains.git && cd mountains
-docker build -t $REPO . && docker push $REPO
+docker build -t mountains . && docker tag mountains $REPO && docker push $REPO
 ```
 #### [Optional] Local Cleanup
 `cd .. && rm -rf mountains && docker image rm $REPO`
@@ -33,7 +33,7 @@ or `terraform apply -var db_username="some_name" -var db_password="some_pwd" ...
 DB_USER
 DB_PWD
 DB_NAME
+DB_HOST
 ```
 #### Apply the Terraform configs
 `terraform apply`
-
