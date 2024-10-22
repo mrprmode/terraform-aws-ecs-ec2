@@ -15,9 +15,9 @@ resource "aws_db_instance" "mountains" {
   allocated_storage      = 5
   engine                 = "mysql"
   engine_version         = "8.0"
-  username               = module.multiple.db_username.secure_value
-  password               = module.multiple.db_password.secure_value
-  db_name                = module.multiple.db_database.secure_value
+  username               = module.db_params.db_username.secure_value
+  password               = module.db_params.db_password.secure_value
+  db_name                = module.db_params.db_database.secure_value
   db_subnet_group_name   = aws_db_subnet_group.mountains.name
   vpc_security_group_ids = [aws_security_group.rds.id]
   parameter_group_name   = aws_db_parameter_group.mountains.name

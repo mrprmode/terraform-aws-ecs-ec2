@@ -1,4 +1,4 @@
-module "multiple" {
+module "db_params" {
   source = "terraform-aws-modules/ssm-parameter/aws"
 
   for_each = local.db_parameters
