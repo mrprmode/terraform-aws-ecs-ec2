@@ -19,7 +19,7 @@ git clone git@github.com:mrprmode/mountains.git && cd mountains
 docker build -t mountains . && docker tag mountains $REPO && docker push $REPO
 ```
 #### [Optional] Local Cleanup
-`cd .. && rm -rf mountains && docker image rm $REPO`
+`cd .. && rm -rf mountains && docker image rm $REPO && docker image rm mountains`
 #### Edit `terraform.tfvars`: DB stuff that your application needs, RDS `MySQL` parameters to be set up with and the the container_port (default:80)
 ```
 # container_port = 3000
